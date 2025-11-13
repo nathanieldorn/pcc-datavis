@@ -21,6 +21,8 @@ def result_frequency(sides=6, rolls=100):
 
 
 def roll_histogram(frequencies, sides=6):
-    """Creaet a histogram for a given number of rolls"""
-    fig = px.bar(x=range(1, sides + 1), y=frequencies)
+    """Create a histogram for a given number of rolls"""
+    title = f"Results of Rolling One D{sides} {sum(frequencies):,} Times"
+    labels = {"x": "Result", "y": "Frequency of Result"}
+    fig = px.bar(x=range(1, sides + 1), y=frequencies, title=title, labels=labels)
     fig.show()

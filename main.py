@@ -16,7 +16,7 @@ def main():
     # walk_about()
 
     # roll a die and get the frequency of results as a histogram
-    roll_histogram(result_frequency(rolls=10000))
+    roll_histogram(result_frequency(rolls=7777))
 
 
 if __name__ == "__main__":
