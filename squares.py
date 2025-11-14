@@ -43,5 +43,5 @@ def squared_nums_points():
     ax.axis([0, x_values[-1] * 1.1, 0, y_values[-1] * 1.1])
     ax.ticklabel_format(style="plain")
 
-    # pyplot.show()
     pyplot.savefig("squares_plot.png", bbox_inches="tight")
+    pyplot.show()

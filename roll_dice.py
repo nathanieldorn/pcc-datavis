@@ -13,16 +13,22 @@ def roll(sides=6, rolls=100):
 def result_frequency(sides=6, rolls=100):
     """Return a list of the frequency of occurrence for each value of the die"""
     # get roll results
-    results = roll(sides, rolls)
+    results_first = roll(sides, rolls)
+    results_second = roll(sides, rolls)
+    results_sum = []
+    for i in range(0, len(results_first)):
+        results_sum.append(results_first[i] + results_second[i])
 
     # create list of result frequencies
-    frequencies = [results.count(value) for value in range(1, sides + 1)]
+    frequencies = [results_sum.count(value) for value in range(2, (sides + 1) * 2)]
     return frequencies
 
 
 def roll_histogram(frequencies, sides=6):
     """Create a histogram for a given number of rolls"""
-    title = f"Results of Rolling One D{sides} {sum(frequencies):,} Times"
+    title = f"Results of Rolling Two D{sides} {sum(frequencies):,} Times"
     labels = {"x": "Result", "y": "Frequency of Result"}
-    fig = px.bar(x=range(1, sides + 1), y=frequencies, title=title, labels=labels)
+    fig = px.bar(x=range(2, (sides + 1) * 2), y=frequencies, title=title, labels=labels)
+    fig.update_layout(xaxis_dtick=1)
+    fig.write_html(f"dice_histogram_d{sides}")
     fig.show()
