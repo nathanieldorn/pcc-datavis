@@ -20,7 +20,7 @@ A sample output:
 ![Random Walk Plot](https://github.com/nathanieldorn/pcc-datavis/blob/main/random_walk_100k.png)
 
 ## Dice Rolling
-Creates a histogram of a single die or multiple dice roll of specified size. The size and number of die must be changed within the `die.py` and `roll_dice.py` files. Plotly is used to render the histogram as HTML and written to the file 'dice_histogram_d<# of die sides>`.
+Creates a histogram of a single die or multiple dice roll of specified size. The size and number of die must be changed within the `die.py` and `roll_dice.py` files. Plotly is used to render the histogram as HTML and written to the file `dice_histogram_d<# of die sides>`.
 
 A sample output:
 ![Die Histogram](https://github.com/nathanieldorn/pcc-datavis/blob/main/die_histogram_sample.png)
