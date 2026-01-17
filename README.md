@@ -10,17 +10,14 @@ The array, input_values, contains the integers, one through eight, to be squared
 ### Dot Plot (squared_num_points)
 The array, x_values, represents the integers to be squared and is created using a list comprehension. It's counterpart list, y_values, uses list comprehension to calculate the square. The function call will both display and save a file of the result.
 
-A sample output:
 ![Squares Plot](https://github.com/nathanieldorn/pcc-datavis/blob/main/squares_plot.png)
 
 ## Random Walks
 Creates a scatter plot of a random walk from a starting cartesian position of (0, 0). The plot shades from white to green with both the start and end points highlighted in orange. Each step is randomly chosen within a defined range. When run, the user will be prompted to save the output or not, after which the result will be displayed via pyplot. 
 
-A sample output:
 ![Random Walk Plot](https://github.com/nathanieldorn/pcc-datavis/blob/main/random_walk_100k.png)
 
 ## Dice Rolling
 Creates a histogram of a single die or multiple dice roll of specified size. The size and number of die must be changed within the `die.py` and `roll_dice.py` files. Plotly is used to render the histogram as HTML and written to the file `dice_histogram_d<# of die sides>`.
 
-A sample output:
 ![Die Histogram](https://github.com/nathanieldorn/pcc-datavis/blob/main/die_histogram_sample.png)
